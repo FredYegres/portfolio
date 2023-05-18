@@ -1,0 +1,187 @@
+body {
+    background-image: url('../img/background.jpg');
+    color: #fff;
+    font-family: 'Archivo Narrow', sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+.card__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+}
+
+.card {
+    padding: 20px;
+    width: 300px;
+    margin-bottom: 50px;
+    border: #e7af055d solid 1px;
+    border-radius: 20px;
+    text-align: center;
+    background-color: #000;
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.contact a {
+    text-decoration: none;
+    color: #E7AE05;
+}
+
+.card.card__contact:hover {
+    box-shadow: none;
+}
+
+.card__container .card:nth-child(1),
+.card__container .card:nth-child(2),
+.card__container .card:nth-child(3) {
+    margin-top: 100px;
+} 
+
+.card:hover {
+    box-shadow: 0px 0px 20px 3px #ff0000;
+}
+
+.card__image {
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.card__button {
+    cursor: pointer;
+    background-color: #E7AE05;
+    padding: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Archivo Narrow', sans-serif;
+    border-radius: 7px;
+}
+
+.card__button a {
+    color: #000;
+    text-decoration: none;
+}
+
+.card__button:hover {
+    background-color: #ffbf00;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 70px;
+    font-family: 'Bruno Ace SC', cursive;
+    font-weight: bold;
+    text-shadow: none;
+}
+
+
+.links a:hover{
+    color: #ff0000;
+    zoom: 1.1;
+}
+
+img {
+    height: 90vh;
+}
+
+#canvas{
+    position: absolute;
+    z-index: 1;
+    display: none;
+}
+
+#intro{
+    padding: 10px;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    left: 0;
+    color: #E7AE05;
+    perspective: 60;
+    perspective-origin: center 0;
+    -webkit-perspective: 60;
+    -webkit-perspective-origin: center 0;
+    letter-spacing: 1px;
+    text-align: justify;
+    text-shadow: 0 0 1px #E7AE05;
+    background-repeat: no-repeat;
+}
+
+#intro__content{
+    opacity: 0;
+    font-size: 30px;
+    line-height: 35px;
+    cursor: default;
+    width: 70%;
+    margin: 0 auto;
+    animation: introContent 5s forwards 7s;
+}
+
+h1, h2, h3, h4{
+    text-align: center;
+}
+
+#prelude{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    color: #1B7DEB;
+    text-align: center;
+    text-shadow: 0 0 1px #1B7DEB;
+    font-size: 50px;
+    animation: prelude 7s linear 1;
+}
+
+.nav {
+    display: flex;
+    gap: .5rem;
+    justify-content: flex-end;
+    padding: 10px 20px;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: #fff;
+    text-shadow: none;
+    font-weight: bold;
+    font-family: 'Archivo Narrow', sans-serif;
+
+}
+
+.nav__link:hover {
+    color: red;
+}
+
+@keyframes prelude {
+    from{opacity: 0;}
+    20%{opacity: 1;}
+    80%{opacity: 1;}
+    to{opacity: 0;}
+}
+
+@keyframes introContent {
+    from{opacity: 0;}
+    20%{opacity: 1;}
+    80%{opacity: 1;}
+    to{opacity: 1;}
+}
